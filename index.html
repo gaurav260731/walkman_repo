@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkman</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="companyName">Panasonic</div>
+      <div class="jackBtn"></div>
+      <div class="playBtn" onclick="onPlay()"><span class="playicon"><i class="fa fa-play"></i></span></div>
+      <div class="pauseBtn" onclick="onPause()"><span class="pauseIcon"><i class="fa fa-pause"></i></span></div>
+      <div class="nextBtn" onclick="onNext('nextBtn')"><span class="nextIcon"><i class="fa fa-forward"></i></span></div>
+      <div class="prevBtn" onClick="onNext('prevBtn')"><span class="prevIcon"><i class="fa fa-backward"></i></span></div>
+     
+      <div class="audioDesc"> 
+        <audio controls="false" class="audio">
+          <source src="test1.mp3" type="audio/mp3">
+        </audio>
+      </div>
+      
+      <div style="display: flex;">
+        <img class="dance-image-1" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a5aa4a0f-4e22-47ac-b702-ca95cd7b7470/de92a8r-c6598d0f-22b4-4717-b42f-be8e83a88fed.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E1YWE0YTBmLTRlMjItNDdhYy1iNzAyLWNhOTVjZDdiNzQ3MFwvZGU5MmE4ci1jNjU5OGQwZi0yMmI0LTQ3MTctYjQyZi1iZThlODNhODhmZWQuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.9wF9CUHZTM-VlER3kUL3kKFMjE6FCPw77Kv7z1Nle1A" />
+        <img class="dancing-image" src="https://media.tenor.com/V7t6BndU6oEAAAAi/stickman-dancing.gif" />
+      </div>
+      </div>
+    </div>
+    <script>
+      var songlist = ["test1.mp3", "test2.mp3", "test3.mp3"];
+      let i = 0;
+
+      function onPause() {
+        document.querySelector('.audio').pause();
+
+        document.querySelector('.playBtn').style.marginRight = '0px';
+        document.querySelector('.pauseBtn').style.marginRight = '5px';
+        document.querySelector('.nextBtn').style.marginRight = '0px';
+        document.querySelector('.prevBtn').style.marginRight = '0px';
+      }
+
+      function onPlay(music="test1.mp3", btnClass = 'undefined') {
+        let element = document.querySelector('.audio source');
+        element.setAttribute('src', music);
+        document.querySelector('.audio').load();
+        document.querySelector('.audio').play();
+        if(btnClass == 'nextBtn') {
+          document.querySelector('.playBtn').style.marginRight = '0px';
+          document.querySelector('.pauseBtn').style.marginRight = '0px';
+          document.querySelector('.nextBtn').style.marginRight = '5px';
+          document.querySelector('.prevBtn').style.marginRight = '0px';
+        }else if(btnClass == 'prevBtn'){
+          document.querySelector('.playBtn').style.marginRight = '0px';
+          document.querySelector('.pauseBtn').style.marginRight = '0px';
+          document.querySelector('.nextBtn').style.marginRight = '0px';
+          document.querySelector('.prevBtn').style.marginRight = '5px';
+        }else {
+          document.querySelector('.playBtn').style.marginRight = '5px';
+          document.querySelector('.pauseBtn').style.marginRight = '0px';
+          document.querySelector('.nextBtn').style.marginRight = '0px';
+          document.querySelector('.prevBtn').style.marginRight = '0px';
+        }
+        
+      }
+      // function onPrev() {
+      //   if(i>= songlist.length) {
+      //     i=0;
+      //     onPlay(songlist[i]);
+      //   }else if(i==0) {
+      //     onPlay(songlist[++i]);
+      //   } else {
+      //     onPlay(songlist[--i]);
+      //   }
+        
+        
+      // }
+      function onNext(btnClass) {
+        
+        if(i>=songlist.length) {
+          i=0;
+          onPlay(songlist[i], btnClass);
+        }else {
+          onPlay(songlist[++i], btnClass);
+        }
+        
+      }
+    </script>
+  </body>
+</html>

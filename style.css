@@ -1,0 +1,244 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  rotate: -90deg;
+  position: relative;
+  width: 259px;
+  height: 418px;
+  border-radius: 5px;
+  background: #e18521;
+}
+.companyName {
+  color: #fff;
+  font-size: 38px;
+  display: block;
+  position: absolute;
+  left: 150px;
+  top: 300px;
+  rotate: 90deg;
+  text-shadow: 2px 3px 3px #3d3820;
+}
+.walkman-name-logo {
+  position: absolute;
+  bottom: 30px;
+  left: 32px;
+  display: flex;
+  gap: 2px;
+  transform: scale(0.8);
+  filter: drop-shadow(2px 2px #49647b);
+}
+.walkman-name-logo .walkman-name-logo-w {
+  display: flex;
+}
+.walkman-name-logo .walkman-name-logo-w div:last-child {
+  margin-left: -4.5px;
+}
+.walkman-name-logo .walkman-name-logo-w .walkman-name-logo-w1 {
+  width: 6px;
+  height: 20px;
+  border: solid #cddbe2;
+  border-width: 0px 4.5px 4.5px 4.5px;
+  -webkit-border-radius: 0 0 100% 100%;
+  -moz-border-radius: 0 0 100% 100%;
+  border-radius: 0 0 100% 100%;
+}
+.walkman-name-logo .walkman-name-logo-a .walkman-name-logo-a1 {
+  width: 10px;
+  height: 20px;
+  border: solid #cddbe2;
+  border-width: 4.5px 4.5px 0px 4.5px;
+  -webkit-border-radius: 100% 100% 0 0;
+  -moz-border-radius: 100% 100% 0 0;
+  border-radius: 100% 100% 0 0;
+}
+.walkman-name-logo .walkman-name-logo-a .walkman-name-logo-a-circle {
+  position: absolute;
+  top: 8px;
+  margin-left: 5.2px;
+  width: 8px;
+  height: 8px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #cddbe2;
+}
+.walkman-name-logo .walkman-name-logo-l {
+  width: 10px;
+  height: 20px;
+  border: solid #cddbe2;
+  border-width: 0 0 4.5px 4.5px;
+  -webkit-border-radius: 0 0 0 5px;
+  -moz-border-radius: 0 0 0 5px;
+  border-radius: 0 0 0 5px;
+}
+.walkman-name-logo .walkman-name-logo-k .walkman-name-logo-k-rect {
+  width: 10px;
+  height: 25px;
+  border: solid #cddbe2;
+  border-width: 0 0 0 5.5px;
+}
+.walkman-name-logo .walkman-name-logo-k .walkman-name-logo-k1 {
+  position: absolute;
+  top: 0px;
+  margin-left: 1px;
+  width: 10px;
+  height: 10px;
+  border: solid #cddbe2;
+  border-width: 0 4.5px 4.5px 0;
+  -webkit-border-radius: 0 0 80% 0;
+  -moz-border-radius: 0 0 80% 0;
+  border-radius: 0 0 80% 0;
+}
+.walkman-name-logo .walkman-name-logo-k .walkman-name-logo-k2 {
+  position: absolute;
+  top: 10px;
+  margin-left: 1px;
+  width: 10px;
+  height: 10px;
+  border: solid #cddbe2;
+  border-width: 4.5px 4.5px 0 0;
+  -webkit-border-radius: 0 80% 0 0;
+  -moz-border-radius: 0 80% 0 0;
+  border-radius: 0 80% 0 0;
+}
+.walkman-name-logo .m-rotate {
+  transform: rotate(180deg);
+}
+.arrow-box {
+  position: absolute;
+  right: 80px;
+  top: 227px;
+  transform-style: preserve-3d;
+}
+.arrow-box .arrow-rect {
+  width: 6px;
+  height: 25px;
+  border: solid #adbcce;
+  border-width: 0px 3px 3px 3px;
+  filter: drop-shadow(2px 2px #49647b);
+}
+.arrow-box .arrow-tri {
+  position: absolute;
+  right: 5px;
+  top: -26px;
+  width: 6px;
+  height: 25px;
+  border: solid #adbcce;
+  border-width: 0px 0px 3px 3px;
+  transform: skew(-20deg);
+}
+.arrow-box .tri-otherside {
+  right: -1px;
+  border: solid #adbcce;
+  border-width: 0px 3px 3px 0px;
+  transform: skew(20deg);
+  filter: drop-shadow(2px 2px #49647b);
+}
+.jackBtn {
+  rotate: -180deg;
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000;
+    background: #e18521;
+    position: relative;
+    top: 405px;
+    box-shadow: 2px 3px 4px 1px #fff;
+    left: 155px;
+}
+.playBtn {
+  position: absolute;
+    top: 320px;
+    right: -10px;
+    width: 15px;
+    height: 70px;
+    background: hsla(240, 7%, 62%, 1);
+}
+
+.pauseBtn {
+  position: absolute;
+    top: 236px;
+    right: -10px;
+    width: 15px;
+    height: 70px;
+    background: hsla(240, 7%, 62%, 1);
+}
+
+.nextBtn {
+  position: absolute;
+    top: 150px;
+    right: -10px;
+    width: 15px;
+    height: 70px;
+    background: hsla(240, 7%, 62%, 1);
+}
+
+.prevBtn {
+  position: absolute;
+    top: 65px;
+    right: -10px;
+    width: 15px;
+    height: 70px;
+    background: hsla(240, 7%, 62%, 1);
+}
+
+.audioDesc {
+  position: absolute;
+    width: 80px;
+    height: 207px;
+    left: 115px;
+    top: 5px;
+    border-radius: 5px;
+    background-color: hsla(260, 11%, 85%, 1);
+}
+
+.playicon i{
+  rotate: 90deg;
+  margin-top: 28px;
+}
+
+.pauseIcon i{
+  rotate: 90deg;
+  margin-top: 28px;
+}
+
+.nextIcon i{
+  rotate: 90deg;
+  margin-top: 28px;
+}
+
+.prevIcon i{
+  rotate: 90deg;
+  margin-top: 28px;
+}
+
+audio {
+  width: 181px;
+  position: absolute;
+  top: 77px;
+  left: -50px;
+  rotate: 90deg;
+}
+
+
+.dancing-image {
+  rotate: 90deg;
+    height: 217px;
+    position: relative;
+    top: 155px;
+    /* bottom: 125px; */
+    /* right: 114px; */
+    left: -85px;
+}
+
+.dance-image-1 {
+  rotate: 90deg;
+    height: 112px;
+}
